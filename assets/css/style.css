@@ -10,7 +10,7 @@ h1 {
     font-size: 50px;
 }
     
-#modal-container {
+.modal-container {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     position: fixed;
@@ -23,7 +23,7 @@ h1 {
 }
 
 
-#modal-inner-container {
+.modal-inner-container {
     background: white;
     height: 400px;
     width: 600px;

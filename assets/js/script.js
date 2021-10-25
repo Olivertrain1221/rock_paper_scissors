@@ -1,7 +1,10 @@
+let userName = "";
+
 // modal container element assignement
 let modalContainer = document.getElementById("modal-container");
 let button = document.getElementById("button-instruction");
 let closeInstructionButton = document.getElementById("close-button")
+
 
 button.addEventListener("click", openModal);
 // modalContainer.addEventListener("click", closeModal);
@@ -15,7 +18,29 @@ function openModal(){
     modalContainer.style.display = "block";
 }
 
-// 
+let mainContainer= document.getElementById("main-container")
+let playButton = document.getElementById("button-play")
+
+
+playButton.addEventListener("click", getUserName);
+
+function getUserName(){
+    let nameModal = document.getElementById("name-modal");
+    nameModal.style.display = "block";
+    let nameSubmitButton = document.getElementById("name-submit");
+    nameSubmitButton.addEventListener("click", function(e){
+        e.preventDefault();
+        let name = document.getElementById("name");
+        userName = name.value;
+        nameModal.style.display = "none";
+        console.log(userName);
+        // call next function!!!!!
+ 
+    });
+};
+
+
+
 function closeModal(){
     modalContainer.style.display = "none";
     console.log("testing button")
