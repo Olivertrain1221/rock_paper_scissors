@@ -41,6 +41,8 @@ function getUserName(){
 
 
 
+
+
 function closeModal(){
     modalContainer.style.display = "none";
     console.log("testing button")
