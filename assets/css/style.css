@@ -13,11 +13,13 @@ h1 {
 #modal-container {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    overflow: hidden;
 }
 
 
@@ -27,9 +29,70 @@ h1 {
     width: 600px;
     margin:0 auto;
     opacity: 1;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    background-color: rgba(82, 78, 78, 0.9);
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+#close-button{
+    width: 80px;    
+    background-color:#3b2e27;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: 275px;
+    margin-top: 30px;
+}
+
+#button-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color:#c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color:#442208
 
 }
 
+#button-instruction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color:#c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color:#442208
+
+}
+#button-unknown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color:#c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color:#442208
+}
 .main-heading {
     text-align: center;
     font-family: 'Mukta', sans-serif;
