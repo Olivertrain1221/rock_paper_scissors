@@ -110,32 +110,40 @@ h1 {
     font-size: 25px;
 }
 
+#traffic-light {
+    background-color: black;
+    margin-left: 50px;
+    display: none;
+}
+
 #red {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: red;
+  background-color: transparent;
+  border-style: solid;
+  border-color: black;  
 }
 
 #yellow {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: yellow;
+  background-color: transparent;
+  border-style: solid;
+  border-color: black;
 }
 
 #green {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: green;
+  background-color: transparent;
+  border-style: solid;
+  border-color: black;
+}
+
+.light-surround {
+    border-radius: 50%;
+    border-top: 2px solid rgb(51, 50, 50);
 }

@@ -6,8 +6,8 @@ let buttonInstruction= document.getElementById("button-instruction");
 let closeInstructionButton = document.getElementById("close-button");
 
 
+// modalContainers event listeners to open/close
 buttonInstruction.addEventListener("click", openModal);
-// modalContainer.addEventListener("click", closeModal);
 closeInstructionButton.addEventListener("click", closeModal);
 
 // Event listener for whole window to run the modalContainerClick func.
@@ -20,7 +20,7 @@ function openModal(){
 
 let mainContainer= document.getElementById("main-container");
 let playButton = document.getElementById("button-play");
-
+let trafficLight = document.getElementById("traffic-light");
 
 playButton.addEventListener("click", getUserName);
 
@@ -36,12 +36,10 @@ function getUserName(){
             nameModal.style.display = "none";
             console.log(userName);
             mainContainer.style.display = "none";
+            gameStartup();
         } 
         
- // call next function!!!!!
-        
-               
-       
+          
  
     });
 };
@@ -60,8 +58,37 @@ function modalContainerClick(e) {
 }
 
 
-
-function gameLogic () {
-    
+function redLightOn() {
+    let redLight = document.getElementById("red");
+    redLight.style.backgroundColor = "red";
 }
 
+function yellowLightOn() {
+    let yellowLight = document.getElementById("yellow");
+    yellowLight.style.backgroundColor = "yellow";
+
+}
+function greenLightOn (){
+    let greenLight = document.getElementById("green");
+    greenLight.style.backgroundColor = "green";
+
+
+}
+
+function gameStartup () {
+    let trafficLight = document.getElementById("traffic-light");
+    trafficLight.style.display = "inline-block";
+
+    // time section for traffic light
+    setTimeout(function() {
+        redLightOn();        
+    }, 2000);
+
+    setTimeout(function() {
+        yellowLightOn();
+    }, 2500);
+
+    setTimeout(function() {
+        greenLightOn();
+    }, 3000);
+}
