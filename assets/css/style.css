@@ -151,19 +151,38 @@ h1 {
 #scissor-image {
     height: 150px;
     width: 150px;
+    position: relative;
+    z-index:10;
 
     /* display:none; */
+}
+
+#scissor-image>* {
+    position: relative;
+    z-index: 9;
+}
+#paper-image>* {
+    position: relative;
+    z-index: 9;
+}
+#rock-image>* {
+    position: relative;
+    z-index: 9;
 }
 
 #paper-image {
     height: 150px;
     width: 150px;
+    position: relative;
+    z-index:10;
     /* display: none; */
 }
 
 #rock-image {
     height: 150px;
     width: 150px;
+    position: relative;
+    z-index:10;
     /* display: none; */
 }
 
@@ -175,14 +194,25 @@ h1 {
     display: none;
 }
 
+
+
+
+
+
+
+
 #score-board {
     width:500px;
     height:200px;
-    background-color: black;
+    background-color: rgb(56, 25, 0);
     color:white;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 1300px;
+    margin-bottom:1200px;
+
+    
 }
 
 #user-score, #ai-score {
