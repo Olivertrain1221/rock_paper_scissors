@@ -18,11 +18,14 @@ function openModal() {
     modalContainer.style.display = "block";
 }
 
+// Getting main container and button elements to link with traffic lights.
 let mainContainer = document.getElementById("main-container");
 let playButton = document.getElementById("button-play");
 let trafficLight = document.getElementById("traffic-light");
 
 playButton.addEventListener("click", getUserName);
+
+
 
 function getUserName() {
     let nameModal = document.getElementById("name-modal");

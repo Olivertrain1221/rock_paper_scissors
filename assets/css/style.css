@@ -204,18 +204,20 @@ h1 {
 #score-board {
     width:500px;
     height:200px;
-    background-color: rgb(56, 25, 0);
+    background-color: #713500;
     color:white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 1300px;
     margin-bottom:1200px;
-
-    
+    font-family: 'Mukta', sans-serif;
+    font-size: 30px;
+    border-color: #966036;
 }
 
 #user-score, #ai-score {
     margin-left: 20px;
     margin-right: 20px;
+    font-family: 'Mukta', sans-serif;
 }
