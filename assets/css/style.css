@@ -9,7 +9,7 @@ h1 {
     font-family: 'Mukta', sans-serif;
     font-size: 50px;
 }
-    
+
 .modal-container {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
@@ -27,7 +27,7 @@ h1 {
     background: white;
     height: 400px;
     width: 600px;
-    margin:0 auto;
+    margin: 0 auto;
     opacity: 1;
     text-align: center;
     font-family: 'Mukta', sans-serif;
@@ -39,10 +39,10 @@ h1 {
     z-index: 10;
 }
 
-#close-button{
-    width: 80px;    
-    background-color:#3b2e27;
-    color:white;
+#close-button {
+    width: 80px;
+    background-color: #3b2e27;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,11 +59,10 @@ h1 {
     width: 300px;
     margin-left: 110px;
     margin-top: 30px;
-    background-color:#c9804a;
+    background-color: #c9804a;
     border-color: #966036;
     font-size: 20px;
-    color:#442208
-
+    color: #442208
 }
 
 #button-instruction {
@@ -74,12 +73,12 @@ h1 {
     width: 300px;
     margin-left: 110px;
     margin-top: 30px;
-    background-color:#c9804a;
+    background-color: #c9804a;
     border-color: #966036;
     font-size: 20px;
-    color:#442208
-
+    color: #442208
 }
+
 #button-unknown {
     display: flex;
     justify-content: center;
@@ -88,11 +87,12 @@ h1 {
     width: 300px;
     margin-left: 110px;
     margin-top: 30px;
-    background-color:#c9804a;
+    background-color: #c9804a;
     border-color: #966036;
     font-size: 20px;
-    color:#442208
+    color: #442208
 }
+
 .main-heading {
     text-align: center;
     font-family: 'Mukta', sans-serif;
@@ -100,7 +100,7 @@ h1 {
 }
 
 #main-container {
-    color:white;
+    color: white;
     width: 500px;
     height: 500px;
     margin: 0 auto;
@@ -117,33 +117,75 @@ h1 {
 }
 
 #red {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: transparent;
-  border-style: solid;
-  border-color: black;  
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
 }
 
 #yellow {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: transparent;
-  border-style: solid;
-  border-color: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
 }
 
 #green {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: transparent;
-  border-style: solid;
-  border-color: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
 }
 
 .light-surround {
     border-radius: 50%;
     border-top: 2px solid rgb(51, 50, 50);
+}
+
+#scissor-image {
+    height: 150px;
+    width: 150px;
+
+    /* display:none; */
+}
+
+#paper-image {
+    height: 150px;
+    width: 150px;
+    /* display: none; */
+}
+
+#rock-image {
+    height: 150px;
+    width: 150px;
+    /* display: none; */
+}
+
+.rock-paper-scissor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    display: none;
+}
+
+#score-board {
+    width:500px;
+    height:200px;
+    background-color: black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-score, #ai-score {
+    margin-left: 20px;
+    margin-right: 20px;
 }

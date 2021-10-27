@@ -72,10 +72,11 @@ function greenLightOn (){
     let greenLight = document.getElementById("green");
     greenLight.style.backgroundColor = "green";
 
-
 }
 
 function gameStartup () {
+    let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
+    gameTiles.style.display = "flex";
     let trafficLight = document.getElementById("traffic-light");
     trafficLight.style.display = "inline-block";
 
@@ -90,5 +91,96 @@ function gameStartup () {
 
     setTimeout(function() {
         greenLightOn();
+        gameTileEventListeners();
     }, 3000);
+    
+}
+
+
+let rock = document.getElementById("rock-image");
+let paper = document.getElementById("paper-image");
+let scissor = document.getElementById("scissor-image");
+
+//  Adds event listeners
+function gameTileEventListeners() {
+    rock.addEventListener("click", userSelection);
+    paper.addEventListener("click", userSelection);
+    scissor.addEventListener("click", userSelection);
+}
+//  Removes event listeners
+function removeGameTileEventListeners() {
+    rock.removeEventListener("click", userSelection);
+    paper.removeEventListener("click", userSelection);
+    scissor.removeEventListener("click", userSelection);
+}
+
+function userSelection(e) {
+    let user = "x";
+    if (e.target == rock) {
+        user = "rock";
+} else if (e.target == paper){
+        user = "paper";
+} else if (e.target == scissor){
+    user ="scissor";
+}
+console.log(user);
+ removeGameTileEventListeners();
+ aiSelection(user);
+}
+
+function aiSelection(user) {
+    let aiOptions = ["rock", "paper", "scissors"];
+    let ai = aiOptions[Math.floor(Math.random() * 3)];
+    console.log(ai);
+    gameLogic(user, ai);
+}
+
+let aiScoreBoard = document.getElementById("ai-score");
+let userScoreBoard = document.getElementById("user-score");
+let aiScore = 0;
+let userScore = 0;
+
+
+function draw() {
+        console.log("draw");
+        gameStartup();
+}
+
+function win() {
+    console.log("win");
+    userScore++;
+    userScoreBoard.innerHTML=userScore;
+    gameStartup();
+}
+
+function lose() {
+    console.log("lose");
+    aiScore++;
+    aiScoreBoard.innerHTML=aiScore;
+    gameStartup();
+}
+
+
+function gameLogic(user, ai) {
+if (user === ai) {
+    draw();
+   } else if (user === 'rock') {
+       if (ai === 'paper') {
+         lose();
+      } else {
+         win(); // rock beats scissors
+      }
+   } else if (user === 'paper') {
+       if (ai === 'scissors') {
+         lose();
+       } else {
+          win(); // paper beats rock
+       }
+   } else if (user === 'scissors') {
+       if (ai === 'rock') {
+           lose();
+       } else {
+          win(); // scissors beats paper
+       }
+   }
 }
